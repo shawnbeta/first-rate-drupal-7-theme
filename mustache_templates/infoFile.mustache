@@ -1,0 +1,27 @@
+{{=<% %>=}}
+name = SW Theme
+description = description = Custom theme designed for First Rate Lawn Service by Shawn Williams. http://shawnbeta.com
+package = Core
+version = VERSION
+core = 7.x
+<%# infoData %>
+<%# css %>
+stylesheets[all][] = css/<% . %>.css
+<%/ css %>
+<%# js %>
+scripts[] = js/<% . %>.js
+<%/ js %>
+<%# regions %>
+regions[<% machine_name %>] = <% name %>
+<%/ regions %>
+<%# features %>
+features[] = <% . %>
+<%/ features %>
+<%/ infoData %>
+
+
+; Information added by Drupal.org packaging script on 2014-11-19
+version = "7.34"
+project = "drupal"
+datestamp = "1416429488"
+

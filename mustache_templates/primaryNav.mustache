@@ -1,0 +1,43 @@
+{{=<% %>=}}
+
+<nav class="primary">
+    <ul class="swContainer">
+
+        <%# items %>
+
+            <li>
+                <i class="icon-<% icon %>"></i>
+
+                <a href="<% href %>" title="<% title %>"><% text %></a>
+                <%# dropdown %>
+
+                    <div class="dropContainer <% style %>">
+
+                        <ul class="childLinks">
+                            <%# childLinks %>
+                                <li>
+                                    <a href="<% href %>" title="<% title %>"><% text %></a>
+                                </li>
+                            <%/ childLinks %>
+                        </ul>
+
+                        <%# view %>
+
+                            <div class="view">
+                                <% . %>
+                            </div>
+
+                        <%/ view %>
+
+                    </div>
+
+                <%/ dropdown %>
+
+
+            </li>
+
+        <%/ items %>
+
+
+    </ul>
+</nav>

@@ -1,0 +1,25 @@
+@import "styles.less";
+
+#swContentWrapper{
+  background: @light1;
+}
+
+.swContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swSidebar {
+  @media (max-width: @screen-xs-max) {
+    float: none;
+    &:before{
+      content: "";
+      background: @dark3;
+      height: 1px;
+      width: 90%;
+      display: block;
+      margin: 50px auto 50px !important;
+      visibility: visible !important;
+    }
+  }
+}

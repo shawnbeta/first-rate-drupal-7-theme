@@ -1,0 +1,99 @@
+@import "styles.less";
+
+.mobile-header {
+  width: 100%;
+  font-size: 25px;
+  background: @hexLightGreen;
+  position: fixed;
+  z-index:2;
+  top: 0;
+  .columnThree i {
+    padding: 10px;
+  }
+
+  a{
+    color: @light1;
+    padding: 3px;
+    padding-bottom: 5px;
+    margin: 5px;
+    background: @hexDarkGreen;
+    &:hover {
+      text-decoration: none;
+      background: @hexLightestGreen;
+    }
+  }
+}
+
+.app-header {
+  position: relative;
+  z-index:4;
+  text-align: center;
+  padding: 10px 0 10px;
+  @media(max-width: @screen-xs-max) {
+    margin-top: 40px;
+  }
+  @media(min-width: @screen-sm-min) {
+    padding-top: 30px;
+    padding-bottom: 55px;
+  }
+  .swButton {
+    background: @hexLightestGreen ;
+    color: @dark1;
+    &:hover {
+      text-decoration: none;
+      background: @hexLightGreen;
+      color: @dark1;
+    }
+  }
+  .phoneWrapper {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+}
+
+.requestEstimateWrapper {
+  margin-top: 30px;
+}
+
+.swLogo {
+  &:hover {
+    text-decoration:none;
+  }
+  .logoTop {
+    font-family: @monts;
+    color: @dark1;
+    @media(max-width: @screen-xs-max){
+      font-size: 36px;
+    }
+    @media(min-width: @screen-sm-min){
+      font-size: 40px;
+    }
+  }
+  .logoBottom {
+    color: @hexDarkGreen;
+    font-family: @slab;
+    line-height: .55em;
+    @media(max-width: @screen-xs-max){
+      font-size: 26px;
+    }
+    @media(min-width: @screen-sm-min){
+      font-size: 30px;
+    }
+  }
+}
+
+.columnThree {
+  font-size: 20px;
+  @media(max-width: @screen-xs-max){
+    text-align: right;
+  }
+}
+
+.marquee {
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  img{
+    max-width: 100%;
+  }
+}
