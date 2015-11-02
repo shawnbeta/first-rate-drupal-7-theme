@@ -11,34 +11,23 @@
 
     <?php if(drupal_is_front_page()): ?>
         <div class="marquee">
-            <img src="<?php print base_path() . '/sites/default/files/flowers.jpg'; ?>">
+            <img src="<?php print base_path() . '/sites/default/files/yard1.jpg'; ?>">
         </div>
     <?php endif; ?>
 
 
     <div class="swContent clearfix">
 	  <div class="mainRegion col-md-9">
-		<?php if(isset($node->nid)) : ?>
-          <div class="pageNavigation">
-<!--			--><?php //print sw_mod_get_page_nav($node->nid); ?>
-		  </div>
-
-		<?php endif;?>
           <a id="main-content"></a>
-          <?php if ($tabs): ?>
-              <div id="tabs-wrapper" class="clearfix"><?php endif; ?>
-                  <?php if(!drupal_is_front_page()): ?>
-                      <?php print render($title_prefix); ?>
-                      <?php if ($title): ?>
-                          <h1<?php print $tabs ? ' class="sectionTitle with-tabs"' : '' ?>><?php print $title ?></h1>
-                      <?php endif; ?>
-                      <?php print render($title_suffix); ?>
-                  <?php endif; ?>
-                  <?php if ($tabs): ?>
-                  <?php print render($tabs); ?>
-              </div>
-            <?php endif; ?>
-          <?php print render($tabs2); ?>
+          <?php if ($tabs): ?><?php print render($tabs); ?><?php endif; ?>
+
+          <?php if(!drupal_is_front_page()): ?>
+                  <header class="clearfix">
+                    <h1><?php print $title ?></h1>
+                    <?php print render($page['header_details']); ?>
+                  </header>
+          <?php endif; ?>  <!-- End of !drupal_is_front_page() -->
+
           <?php print $messages; ?>
           <?php print render($page['help']); ?>
           <?php if ($action_links): ?>
