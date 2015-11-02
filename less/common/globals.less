@@ -1,0 +1,44 @@
+@import "../styles.less";
+
+body {
+  position: relative;
+  font-family: @slab;
+  font-size: 18px;
+  color: @dark2;
+  font-weight: 300;
+  background-color: @dark3;
+}
+
+//#swContentWrapper{
+//  background: @light1;
+//}
+
+.swContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+.hideXS{
+  @media(max-width: @screen-xs-max){
+    display: none;
+  }
+}
+
+.hideOverXS{
+  @media(min-width: @screen-sm-min){
+    display: none;
+  }
+}
+
+
+.stopScrolling {
+  height: 100%;
+  //overflow: hidden;
+}

@@ -1,0 +1,73 @@
+@import "../styles.less";
+
+form label {
+}
+
+
+
+.block {
+
+  &:after{
+    content: " ";
+    background: @dark3;
+    height: 1px;
+    width: 90%;
+    margin: 50px auto 50px !important;
+    visibility: visible;
+  }
+  &:last-child {
+    &:after {
+      content: none;
+    }
+  }
+  //@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  //  &:nth-last-child(-n+2){
+  //    &:after{
+  //      content: none;
+  //    }
+  //  }
+  //}
+}
+
+// Static quote form
+#block-block-1 {
+  @media (max-width: @screen-xs-max) {
+    text-align: center;
+  }
+}
+
+//// Our Products
+//#block-block-2,
+//// Aeration Video
+//#block-block-3 {
+//  .make-sm-column(6);
+//  .make-md-column(12);
+//}
+
+// Our Products
+#block-block-2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: @hexLightestGreen;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.quickEstimate h2 {
+  display: none;
+}
+
+
+.productList {
+  text-align: center;
+  padding: 0;
+  color: @dark4;
+  li {
+    list-style: none;
+  }
+}
+
+.aerationBlock {
+  max-width: 450px;
+  margin: 0 auto;
+}

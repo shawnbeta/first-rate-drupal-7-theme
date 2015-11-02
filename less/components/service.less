@@ -1,0 +1,42 @@
+@import "../styles.less";
+
+.homePage {
+  header h1,
+  .services h2{
+    margin-bottom: 10px;
+  }
+}
+
+.services{
+  .swDescription {
+    margin-bottom: 20px;
+  }
+  .swItem {
+    margin-bottom: 35px;
+  }
+  .swTitle a{
+    font-family: @monts;
+    font-size: 24px;
+    color: @hexDarkGreen;
+  }
+  .swImg {
+    margin-bottom: 10px;
+    @media (max-width: @screen-xs-max) {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  .footer{
+    text-align: center;
+  }
+}
+
+.node-services .field-name-field-image {
+  margin-bottom: 20px;
+}
+
+.node-services .aerationBlock{
+  max-width: 450px;
+  margin: 20px auto;
+}

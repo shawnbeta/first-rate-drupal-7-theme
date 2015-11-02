@@ -1,0 +1,181 @@
+@import "../styles.less";
+
+.mask {
+  background: @dark1;
+  opacity: .7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+  display: none;
+}
+
+.toggleMenuWrapper a {
+  background: none;
+  font-size: 30px;
+  color: @dark1;
+}
+
+.front {
+  .navWrapper {
+    margin-bottom: 0;
+  }
+}
+
+.swMenuToggler {
+  padding: 0 !important;
+}
+
+.navWrapper {
+  z-index: 2;
+  margin-bottom: 30px;
+  font-family: @monts;
+  text-align: center;
+
+  @media (max-width: @screen-xs-max) {
+    position: absolute;
+    margin-top: 50px;
+    width: 100%;
+    z-index: 5;
+    display:none;
+    height: 0;
+    overflow: visible;
+  }
+
+  .swMenuToggler {
+    @media (max-width: @screen-xs-max) {
+      position: absolute;
+      top: -20px;
+      z-index: 6;
+      font-size: 30px;
+      color: @dark1;
+    }
+    }
+
+  @media (min-width: @screen-sm-min) {
+    background: @hexDarkGreen;
+  }
+
+  // Wrapper
+  > ul.primary-nav {
+    margin: 0 auto;
+    display: block;
+    font-size: 0;
+    overflow: visible;
+    @media (max-width: @screen-xs-max) {
+      width: 320px;
+    }
+    a {
+      color: @light1;
+      @media (max-width: @screen-xs-max) {
+        width: 100%;
+        border-bottom: 1px dotted @hexLightestGreen;
+      }
+    }
+
+    // Primary Level
+    & > li {
+      font-size: 18px;
+      display: inline-block;
+      position: relative;
+      padding: 0;
+
+      @media (max-width: @screen-xs-max) {
+        text-align: left;
+        width: 100%;
+        padding: 0;
+        background: @hexDarkGreen;
+      }
+
+      @media (min-width: @screen-sm-min){
+        background: @hexDarkGreen;
+        -webkit-animation: lightToDark .5s 1; /* Safari 4+ */
+        -moz-animation:    lightToDark .5s 1; /* Fx 5+ */
+        -o-animation:      lightToDark .5s 1; /* Opera 12+ */
+        animation: lightToDark .5s 1;
+      }
+
+      &.active-trail {
+        background: @hexLightestGreen;
+        @media (max-width: @screen-xs-max) {
+          color: @dark1;
+        }
+      }
+      &:hover {
+        -webkit-animation: darkToLight .5s 1; /* Safari 4+ */
+        -moz-animation:    darkToLight .5s 1; /* Fx 5+ */
+        -o-animation:      darkToLight .5s 1; /* Opera 12+ */
+        animation: darkToLight .5s 1;
+        background: @hexLightGreen;
+        ul {
+          left: 0;
+          opacity: 1;
+          -webkit-animation: hideToShow .5s 1; /* Safari 4+ */
+          -moz-animation:    hideToShow .5s 1; /* Fx 5+ */
+          -o-animation:      hideToShow .5s 1; /* Opera 12+ */
+          animation: hideToShow .5s 1;
+        }
+      }
+      & > a {
+        padding: 18px 15px 23px;
+      }
+
+      a:hover,
+      a.active-trail:hover {
+        background: none;
+      }
+
+      // Secondary Level
+      ul {
+
+        @media (max-width: @screen-xs-max) {
+        }
+        @media (min-width: @screen-sm-min) {
+          position: absolute;
+          left: -9999px;
+          z-index: 2;
+        }
+
+        text-align: left;
+        li {
+          @media (max-width: @screen-xs-max) {
+            background: @hexDarkGreen;
+          }
+          @media (min-width: @screen-sm-min) {
+            width: 200%;
+            background: @hexLightGreen;
+            &:hover {
+              -webkit-animation: lightToLightest .5s 1; /* Safari 4+ */
+              -moz-animation:    lightToLightest .5s 1; /* Fx 5+ */
+              -o-animation:      lightToLightest .5s 1; /* Opera 12+ */
+              animation: lightToLightest .5s 1;
+              background: @hexLightestGreen;
+            }
+          }
+          a,
+          a:before {
+            @media (max-width: @screen-xs-max) {
+              vertical-align: middle;
+              display: inline-block;
+            }
+          }
+
+          a {
+            display: block;
+              border-bottom: 1px solid @hexLightestGreen;
+              &:before {
+                content: "\f105";
+                font-family: "FontAwesome";
+                padding-right: 10px;
+              }
+
+          }
+
+        }
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+@import "../styles.less";
+
+img {
+  .img-responsive;
+  max-width: 100%;
+}
+
+.swVideo {
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.swVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swVideo object,
+.swVideo embed, {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

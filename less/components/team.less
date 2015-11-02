@@ -1,0 +1,49 @@
+@import "../styles.less";
+
+.team {
+  .swItem {
+    font-family: @monts;
+    max-width: 480px;
+
+
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    .swInfo {
+      text-align: center;
+      padding: 10px;
+      .swTitle {
+        color: @dark1;
+      }
+      .swPosition {
+        font-size: 14px;
+        color: @dark4;
+      }
+    }
+    @media (max-width: @screen-xs-max) {
+      margin: 0 auto;
+    }
+  }
+  .swItem{
+    &:first-child{
+      .swWrapper{
+        background: @hexDarkGreen;
+      }
+    }
+    &:last-child {
+      .swWrapper{
+        background: @hexLightGreen;
+      }
+    }
+  }
+
+  // Fix for About block underline issue with float
+  .sidebar-block .swItem {
+    @media (min-width: @screen-lg-min) {
+      float: none;
+    }
+  }
+
+
+}

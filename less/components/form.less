@@ -1,0 +1,87 @@
+@import "../styles.less";
+
+form button {
+  border: none;
+}
+
+.webform-client-form {
+  margin: 0 auto;
+  max-width: 600px;
+
+  legend {
+    border: none;
+  }
+
+}
+
+form label {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.quickEstimate {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    margin: 0 auto 10px;
+  }
+  button {
+    margin: 0 auto;
+  }
+}
+
+.hidden{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+input {
+  padding: 10px;
+}
+
+input,
+button {
+  display: block;
+}
+
+input,
+textarea {
+  border: 1px solid @dark2;
+  padding: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+textarea {
+  height: 200px;
+}
+
+.requestPageForm {
+  input{
+    margin-bottom: 10px;
+  }
+}
+
+.form-submit {
+  text-align: center;
+  background: @hexLightestGreen;
+  color: @dark1;
+  margin: 0 auto;
+  max-width: 250px;
+  &:hover {
+    background: @hexDarkGreen;
+    color: @light1;
+  }
+}
